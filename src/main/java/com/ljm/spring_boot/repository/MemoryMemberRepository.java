@@ -1,6 +1,7 @@
 package com.ljm.spring_boot.repository;
 
 import com.ljm.spring_boot.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
