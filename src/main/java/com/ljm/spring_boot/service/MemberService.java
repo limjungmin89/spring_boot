@@ -1,6 +1,7 @@
 package com.ljm.spring_boot.service;
 
 import com.ljm.spring_boot.domain.Member;
+import com.ljm.spring_boot.repository.JdbcRepository;
 import com.ljm.spring_boot.repository.MemberRepository;
 import com.ljm.spring_boot.repository.MemoryMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
