@@ -51,11 +51,6 @@ public class JdbcTemplateRepository implements MemberRepository{
         return reuslt;
     }
 
-    @Override
-    public void clearStore() {
-
-    }
-
     private RowMapper<Member> memberRowMapper() {
         return (rs, rowNum) -> {
             Member member = new Member();

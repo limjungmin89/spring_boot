@@ -6,11 +6,11 @@ import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Optional;
 
-public class JpaRepository implements MemberRepository{
+public class JpaMemberRepository implements MemberRepository{
 
     private final EntityManager entityManager;
 
-    public JpaRepository(EntityManager entityManager) {
+    public JpaMemberRepository(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
 
@@ -35,11 +35,7 @@ public class JpaRepository implements MemberRepository{
     @Override
     public List<Member> findAll() {
         List<Member> result = entityManager.createQuery("select m from Member m", Member.class).getResultList();
-        return null;
+        return result;
     }
 
-    @Override
-    public void clearStore() {
-
-    }
 }

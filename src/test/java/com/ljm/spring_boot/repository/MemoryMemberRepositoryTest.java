@@ -11,11 +11,6 @@ public class MemoryMemberRepositoryTest {
 
     MemberRepository memberRepository = new MemoryMemberRepository();
 
-    @AfterEach
-    public void afterEach() {
-        memberRepository.clearStore();
-    }
-
     @Test
     public void save() {
         Member member = new Member();

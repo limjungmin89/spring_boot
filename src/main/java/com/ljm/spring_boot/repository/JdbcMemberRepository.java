@@ -9,13 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import static org.springframework.jdbc.datasource.DataSourceUtils.getConnection;
-
-public class JdbcRepository implements MemberRepository {
+public class JdbcMemberRepository implements MemberRepository {
 
     private final DataSource dataSource;
 
-    public JdbcRepository(DataSource dataSource) {
+    public JdbcMemberRepository(DataSource dataSource) {
         this.dataSource = dataSource;
     }
 
@@ -127,11 +125,6 @@ public class JdbcRepository implements MemberRepository {
         } finally {
             close(conn, pstmt, rs);
         }
-    }
-
-    @Override
-    public void clearStore() {
-
     }
 
     private void close(Connection conn, PreparedStatement pstmt, ResultSet rs)

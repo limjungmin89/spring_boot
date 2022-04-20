@@ -1,15 +1,13 @@
 package com.ljm.spring_boot.service;
 
 import com.ljm.spring_boot.domain.Member;
-import com.ljm.spring_boot.repository.JdbcRepository;
 import com.ljm.spring_boot.repository.MemberRepository;
-import com.ljm.spring_boot.repository.MemoryMemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class MemberService {
 
     private MemberRepository memberRepository;
@@ -38,7 +36,10 @@ public class MemberService {
      * @return
      */
     public List<Member> findMembers() {
-        return memberRepository.findAll();
+
+        List<Member> members = memberRepository.findAll();
+
+        return members;
     }
 
     /**
