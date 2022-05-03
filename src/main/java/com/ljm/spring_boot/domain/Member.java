@@ -3,6 +3,7 @@ package com.ljm.spring_boot.domain;
 import javax.persistence.*;
 
 @Entity
+@Table(name="member")
 public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

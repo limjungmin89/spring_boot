@@ -1,12 +1,13 @@
 spring:
   jpa:
-    hibernate:
-      ddl-auto: none
     database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
     properties:
       hibernate:
         format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
 
   datasource:
     driver-class-name: org.h2.Driver
