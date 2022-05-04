@@ -1,4 +1,4 @@
-package com.ljm.spring_boot.config;
+package com.ljm.spring_boot.jwt.config;
 
 import com.ljm.spring_boot.jwt.JwtFilter;
 import com.ljm.spring_boot.jwt.TokenProvider;

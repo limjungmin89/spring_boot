@@ -1,8 +1,9 @@
 package com.ljm.spring_boot.config;
 
-import com.ljm.spring_boot.config.handler.JwtAccessDeniedHandler;
-import com.ljm.spring_boot.config.handler.JwtAuthenticationEntryPoint;
+import com.ljm.spring_boot.jwt.config.handler.JwtAccessDeniedHandler;
+import com.ljm.spring_boot.jwt.config.handler.JwtAuthenticationEntryPoint;
 import com.ljm.spring_boot.jwt.TokenProvider;
+import com.ljm.spring_boot.jwt.config.JwtSecurityConfig;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;

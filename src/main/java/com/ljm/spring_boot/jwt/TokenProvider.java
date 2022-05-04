@@ -54,7 +54,10 @@ public class TokenProvider implements InitializingBean {
     }
 
     public Authentication getAuthentication(String token) {
+        // token으로 claim 생성
         Claims claims = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token).getBody();
+
+        // claim 에서 권한 정보 추출
         Collection<? extends GrantedAuthority> authorities = Arrays.stream(claims.get(AUTHORITIES_KEY).toString().split(",")).map(SimpleGrantedAuthority::new).collect(Collectors.toList());
         User principal = new User(claims.getSubject(),"",authorities);
 
@@ -62,6 +65,7 @@ public class TokenProvider implements InitializingBean {
     }
 
     public boolean validateToken(String token) {
+
         try {
             Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
             return true;

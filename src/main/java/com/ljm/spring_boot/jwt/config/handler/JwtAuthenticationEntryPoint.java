@@ -1,4 +1,4 @@
-package com.ljm.spring_boot.config.handler;
+package com.ljm.spring_boot.jwt.config.handler;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
