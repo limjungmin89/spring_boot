@@ -1,6 +1,6 @@
 package com.ljm.spring_boot.jwt.repository;
 
-import com.ljm.spring_boot.domain.Users;
+import com.ljm.spring_boot.jwt.domain.Users;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 

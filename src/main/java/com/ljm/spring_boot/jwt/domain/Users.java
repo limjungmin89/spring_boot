@@ -1,5 +1,6 @@
-package com.ljm.spring_boot.domain;
+package com.ljm.spring_boot.jwt.domain;
 
+import com.ljm.spring_boot.domain.Authority;
 import lombok.*;
 
 import javax.persistence.*;
