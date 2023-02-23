@@ -13,7 +13,7 @@ public class HelloController {
     @GetMapping("hello")
     public String hello(Model model) {
         model.addAttribute("hello", "hello");
-        return "hello world 66666";
+        return "hello world 77777";
     }
 
     @GetMapping("hello-api")
