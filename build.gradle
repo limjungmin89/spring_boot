@@ -47,5 +47,5 @@ jar {
 }
 
 bootJar {
-	mainClassName = 'com.ljm.spring_boo'
+	mainClassName = 'com.ljm.spring_boot'
 }
